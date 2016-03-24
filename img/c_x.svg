@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" class=""/>
+ <title>Tic Tac Toe</title>
+
+ <metadata id="metadata7">image/svg+xmlTic Tac Toe2010-07-21mazeowww.openclipart.orgentic tac toetic-tac-toetick tack toetick-tack-toegamegamesA game of tic-tac-toe in progress.</metadata>
+ <g class="currentLayer">
+  <title>Layer 1</title>
+  
+  <g id="svg_1" class="">
+   <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-miterlimit="4" stroke-dashoffset="0" id="path3676" d="m10.899375580078129,5.160277423557282 c19.607048,11.244652 33.795158,29.334084 49.728645,44.918777 c-7.007111,7.20647 -11.414139,-6.358295 -17.052429,-9.858994000000001 c-11.052872,-12.053177 -22.706978,-24.248817 -37.325134,-31.945286 c1.549683,-1.038117 3.099236,-2.076383 4.648918,-3.114498 z"/>
+   <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-miterlimit="4" stroke-dashoffset="0" id="path3678" d="m56.314041580078126,4.713427423557281 c-11.148987,14.233082 -23.505707,27.402821 -36.517448,39.945713 c-1.7955169999999996,4.951488 -18.3871,16.510624 -8.64241,6.133335 c13.050117,-14.025063 27.335167,-26.984692 38.808296,-42.446398 c1.3086090000000001,-2.23285 4.248138,-2.444931 6.351563,-3.63265 z"/>
+  </g>
+ </g>
+</svg>
