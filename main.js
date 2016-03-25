@@ -1,5 +1,5 @@
 var gameImgDir="img/";
-var gTexts=[]; // Для многоязычности.
+var gTexts=[];
 gTexts['win1']='Win '; gTexts['win2']='!';
 gTexts['playing']='...'
 gTexts['start']='Begin game!'

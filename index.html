@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css" /> <!-- использование стиля из файла -->
-    <script type="text/javascript" src="main.js"></script> <!-- загрузка скрипта игры -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript"> <!-- инициализирующий игру скрипт и обработка событий -->
     function clkGameButton(){ // событие начала новой игры
-        if (isNaN(frnG.nCells.value)) { // проверка правильности ввода
+        if (isNaN(frnG.nCells.value)) {
             alert("Введите число клеток.");
             return;
         }
@@ -15,22 +15,22 @@
         createField(n,n);
         gameinfo.innerText="Начало игры. Всего точек "+nMaxPoint+"\nМинимальная вероятность победы:"+Math.round(nMaxPoint/(n*n)*100)+"%";
     }
-    function initGame(){ // инициализация игры
-        gTexts['win1']='Победил "'; gTexts['win2']='" !'; // настроцка текста
+    function initGame(){
+        gTexts['win1']='Победил "'; gTexts['win2']='" !';
         gTexts['playing']='игра продолжается...'
         gTexts['start']='Начало игры. Ваш ход.'
-        createField(3,3); // создание игрового поля
+        createField(3,3);
     }
     </script>
 </head>
 <body onload="initGame();">
     <table width="100%"><tr>
-        <td width="50%">
-            <span id="gameinfo">Кликните по клетке, чтобы открыть её</span> <!-- сообщения игры -->
-        </td><td width="50%">
+        <td width="50%" style="text-align: center">
+            <span id="gameinfo">Кликните по клетке, чтобы открыть её</span>
+        </td><td width="50%" style="text-align: center">
         <form name="frnG" action="javascript:clkGameButton();">
-            Размер поля: <input type="text" name="nCells" value="8" title="Число клеток" size="3"> <!-- текстовое поле -->
-            <input type="button" value="Начать игру" onclick="clkGameButton();"> <!-- кнопка начала игры -->
+            Размер поля: <input type="text" name="nCells" value="8" title="Число клеток" size="3">
+            <input type="button" value="Начать игру" onclick="clkGameButton();">
         </form></td>
     </tr></table>
 
