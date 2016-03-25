@@ -1,13 +1,37 @@
-
+* { margin:0; padding:0; }
+html, body, .wrapper { height: 100%; }
+body > .wrapper {height: auto; min-height: 100%;}
+.header{
+    height: 70px;
+    background-color: cornsilk;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.flex-child{
+    margin: auto;
+}
+.content{
+    padding-top: 25px;
+}
+footer{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: -70px;
+    clear:both;
+    height: 70px;
+    background-color: cornsilk;
+}
 #gameinfo {
     font-size: 110%;
 }
-div {
-    display: table;
-    margin: 0 auto;
-}
+
 #game table{
-    border:3px groove blue;
+    border:3px groove dodgerblue;
     background-image:url("img/fon.jpg");  }
 #game table tr td{
     border:1px dotted red;

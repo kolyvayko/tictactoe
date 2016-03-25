@@ -1,3 +1,19 @@
+function clkGameButton(){ // событие начала новой игры
+    if (isNaN(frnG.nCells.value)) {
+        alert("Введите число клеток.");
+        return;
+    }
+    var n=parseInt(frnG.nCells.value);
+    createField(n,n);
+    gameinfo.innerText="Начало игры. Всего точек "+nMaxPoint+"\nМинимальная вероятность победы:"+Math.round(nMaxPoint/(n*n)*100)+"%";
+}
+function initGame(){
+    gTexts['win1']='Победил "'; gTexts['win2']='" !';
+    gTexts['playing']='игра продолжается...'
+    gTexts['start']='Начало игры. Ваш ход.'
+    createField(3,3);
+}
+
 var gameImgDir="img/";
 var gTexts=[];
 gTexts['win1']='Win '; gTexts['win2']='!';
