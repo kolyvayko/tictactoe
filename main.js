@@ -1,19 +1,3 @@
-function clkGameButton(){ // событие начала новой игры
-    if (isNaN(frnG.nCells.value)) {
-        alert("Введите число клеток.");
-        return;
-    }
-    var n=parseInt(frnG.nCells.value);
-    createField(n,n);
-    gameinfo.innerText="Начало игры. Всего точек "+nMaxPoint+"\nМинимальная вероятность победы:"+Math.round(nMaxPoint/(n*n)*100)+"%";
-}
-function initGame(){
-    gTexts['win1']='Победил "'; gTexts['win2']='" !';
-    gTexts['playing']='игра продолжается...'
-    gTexts['start']='Начало игры. Ваш ход.'
-    createField(3,3);
-}
-
 var gameImgDir="img/";
 var gTexts=[];
 gTexts['win1']='Win '; gTexts['win2']='!';
@@ -42,7 +26,7 @@ function createField(w,h){ // Задаёт размер игрового пол�
 function setCell(x,y,t) { // Поставить крестик или нолик
     gField[x][y]=t; // Запомнить t в массиве
     var imgsrc=gameImgDir+'c_null.svg'; // изображение по умолчанию
-    if (t=='x') imgsrc=gameImgDir+'c_x.svg';//'c_x.gif'; // картинка для крестика
+    if (t=='x') imgsrc=gameImgDir+'c_x.svg';// картинка для крестика
     if (t=='o') imgsrc=gameImgDir+'c_o.svg'; // картинка для нолика
     var oName="c"+x+"_"+y; // составление имени картинки
     document.getElementById(oName).src = imgsrc; // замена изображения
@@ -71,7 +55,7 @@ function isWin(){ // Проверка победы.
             if (lC!=null) return lC;
         }
     }
-    // TO DO - если все клетки заняты, но никто не победил, то ничья, но пока это условие не сделано. Попробуйте сами доделать эту проверку ;)
+
     return false; // если никто не победил
 }
 
@@ -126,10 +110,28 @@ function onCellClk(x,y) { // Действия при клике по клетк�
         }
         if (!win) {
             gameinfo.innerText = gTexts['playing'] // отображение сообщения
-        } else {
+        }
+        else {
+
             var mes=gTexts['win1'] + win + gTexts['win2'];
             alert(mes); // отображение сообщения о победе
             gameinfo.innerText = mes;
         }
     }
+}
+function clkGameButton(){ // событие начала новой игры
+    if (frnG.nCells.value<3) {
+        alert("Введите число клеток больше 2");
+        return;
+    }
+    var n=parseInt(frnG.nCells.value);
+    createField(n,n);
+}
+function initGame(){
+    gTexts['win1']='Победил "';
+    gTexts['win2']='" !';
+    gTexts['playing']='игра продолжается...';
+    gTexts['start']='Начало игры. Ваш ход.';
+    gTexts['nowin']='Ничья';
+    createField(3,3);
 }
